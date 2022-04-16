@@ -1,4 +1,3 @@
-
 import time
 from selenium.webdriver.support.ui import WebDriverWait, Select
 from selenium.webdriver.common.by import By
@@ -237,7 +236,7 @@ class rytr:
             WebDriverWait(self.driver,10).until(
                 EC.presence_of_element_located((By.XPATH,"//*[contains(text(), 'Product description')]/following-sibling::textarea"))
             ).send_keys(product_description)
-            time.sleep(3)
+            time.sleep(4)
             #i use time.sleep because it dont wait the elemnt to be clickable IDK why
             WebDriverWait(self.driver,10).until(
                 EC.element_to_be_clickable((By.XPATH,"//*[contains(text(), 'Ryte for me')]"))
